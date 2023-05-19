@@ -9,7 +9,7 @@ services:
       service:
         name: serverless-devs-application
       function:
-        name: my-app-zx9t
+        name: my-app-fh3u
         description: Initialize
         runtime: nodejs14
         memorySize: 128
