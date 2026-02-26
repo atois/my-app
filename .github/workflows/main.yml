@@ -1,13 +1,7 @@
-name: K3s Runner Test
-
-on:
-  workflow_dispatch: # 核心：有了这一行才会出现手动触发按钮
-
+name: ARC Test
+on: push
 jobs:
-  test-k3s:
-    runs-on: atois-runner # 必须匹配你 Helm 安装时设置的名字
+  test:
+    runs-on: arc-runners-set  # 必须匹配你设置的 runnerScaleSetName
     steps:
-      - name: Hello from K3s
-        run: |
-          echo "Success! This job is running on my K3s cluster."
-          echo "Node hostname: $(hostname)"
+      - run: echo "Hello from K3s!"
