@@ -1,0 +1,13 @@
+name: K3s Runner Test
+
+on:
+  workflow_dispatch: # 核心：有了这一行才会出现手动触发按钮
+
+jobs:
+  test-k3s:
+    runs-on: k3s-runner # 必须匹配你 Helm 安装时设置的名字
+    steps:
+      - name: Hello from K3s
+        run: |
+          echo "Success! This job is running on my K3s cluster."
+          echo "Node hostname: $(hostname)"
